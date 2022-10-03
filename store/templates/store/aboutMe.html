@@ -1,0 +1,13 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block body %}
+    <section class="hidden">
+        <h1 id="name">About Me</h1>
+    </section>
+    <section class="hidden">
+        <p>I am a full-stack software developer/ programmer. I have been involved in the development and deployment of several insightful websites and applications. My skill set revolves arround but not limited to computer programming(python), web development(Django), mobile app development(django/ flutter), database management(postgre sql), game dev(py game) data analysis(mat-plot-lib) etc. I am a tech enthusiast and have always had a keen intrest inmatters that affect not only the present but also the future, and I am willing and able to use my skill set to impact on the future positively.</p>
+        <a class='button' href="{% url 'experience' %}">experience</a>
+    </section>
+
+{% endblock %}

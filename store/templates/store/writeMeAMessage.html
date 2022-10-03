@@ -1,0 +1,28 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block body %}
+<section class="hidden">
+    <h1 id="name">Contact Me</h1>
+</section>
+    <section class="hidden">
+        <p>I am intrested in building my career and knowledge as a programmer, if you have any request please don't hesitate to contact me using the below form below</p>
+    </section>
+    <section class="hidden">
+        <form action="{% url 'writeMeAMessage' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="submit">
+        </form>
+        <p class="hidden_message hide" style="font-size: 18px;color: black;background-color: pink;text-align: center;">submitted</p>
+    </section>
+
+    <script>
+        var form = document.querySelector('form')
+        form.addEventListener('submit', function(){
+            var message = document.querySelector('.hidden_message')
+            message.classList.remove('hide')
+        })
+    </script>
+
+{% endblock %}

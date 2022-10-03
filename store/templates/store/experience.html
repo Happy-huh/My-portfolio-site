@@ -1,0 +1,12 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block body %}
+    <section class="hidden">
+        <h1 id="name">Skills and <br> Exprerience</h1>
+    </section>
+    <section class="hidden">
+        <p>My level of expertice varries among differnt fields, I have worked on a number of projects ranging from basic web sites to complex applications that challenges core knowledge and reuires deep understanding and research with the help of able minded individuals. I offer not only skill, but I am also a team player willing and able to work with individuals to impact on the future possitively</p>
+        <a class='button' href="{% url 'writeMeAMessage' %}">Write me a message</a>
+    </section>
+{% endblock %}

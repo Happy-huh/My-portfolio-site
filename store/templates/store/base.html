@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'store/styles.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store</title>
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        
+    <nav>
+        <ul>
+            <li><a href="{% url 'store' %}">home</a></li>
+            <li><a href="{% url 'aboutMe' %}">about me</a></li>
+            <li><a href="{% url 'experience' %}">experience</a></li>
+            <li><a href="{% url 'writeMeAMessage' %}">write me a message</a></li>
+        </ul>
+    </nav>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="{% static 'store/js.js' %}"></script>
+    <script>
+        var typed = new Typed('.auto-type',{
+            strings: ["coding!", "coding!!", "and coding again!!!"],
+            typespeed: 150,
+            backspeed: 150,
+            loop: true
+        })
+    </script>
+</body>
+</html>

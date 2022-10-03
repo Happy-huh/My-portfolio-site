@@ -1,0 +1,21 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <section class="hidden">
+        <h1 id="name">Hi,<br>I am Stephen,<br>A Full-stack Developer</h1>
+    </section>
+
+    <img src="#" alt="" class="bigS">
+
+    <section class="hidden">
+        <h1>I love<span class="auto-type" style="color: rgb(67, 238, 67);"></span></h1>
+    </section>
+
+    <section class="hidden">
+        <h3>Python programmer / Django Developer</h3>
+        <a class='button' href="{% url 'aboutMe' %}">About Me</a>
+    </section>
+
+{% endblock %}

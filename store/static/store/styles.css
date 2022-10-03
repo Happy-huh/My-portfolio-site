@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=poppins:wght@200;300;500;200;600;700;800;900;&display=swap');
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: linear-gradient(-45deg, black, black, #23a6d5, #23d5ab);
+    background-size: 600% 600%;
+    animation: gradient 15s ease infinite;
+    color: #ffffff;
+    font-family: 'poppins', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+#name{
+    font-size: 28px;
+    color: rgb(18, 235, 18);
+    border: 5px solid green;
+    border-radius: 50%;
+    padding: 35px;
+    position: relative;
+    right: 250px;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+section p{
+    font-size: 12px;
+    width: 900px;
+    word-spacing: 3px;
+}
+input{
+    display: block;
+    margin: 5px;
+    border: 2px solid #23d5ab;
+    padding: 18;
+    font-size: 15;
+    border-radius: 6px;
+}
+.hide{
+    display: none;
+}
+form input:focus{
+    border: 3px dashed #23d5ab;
+    outline: none;
+}
+textarea{
+    display: block;
+    margin: 5px;
+    border: 2px solid #23d5ab;
+    padding: 18;
+    font-size: 15;
+    border-radius: 6px;
+}
+form textarea:focus{
+    border: 3px dashed #23d5ab;
+    outline: none;
+}
+.button{
+    border: 2px solid #23d5ab;
+    color: #23d5ab;
+    padding: 10px 3em 10px;
+    text-decoration: none;
+}
+footer ul{
+    position: relative;
+    left: 248px;
+}
+li{
+    display: inline;
+    padding: 6px;
+}
+footer li a{
+    text-decoration: none;
+    color: black;
+}
+footer li a:hover{
+    color: rgb(207, 207, 207);
+}
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 10vh;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 3s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.logos{
+    display: flex;
+}
+.logo:nth-child(2){
+    transition-delay: 200ms;
+}
+.logo:nth-child(3){
+    transition-delay: 400ms;
+}
+.logo:nth-child(4){
+    transition-delay: 600ms;
+}
+
+.logo{
+    background-color: aqua;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 0 0.5rem;
+}
+footer{
+    position: relative;
+    width: 100%;
+    background-color: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;   
+}
+footer{
+    position: relative;
+    top: 30%;
+}
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('images/wave.png');
+    background-size: 1000px 100px;
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 3s linear infinite;
+}
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 0;
+    animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20;
+    animation: animateWave_02 3s linear infinite;
+}
+@keyframes animateWave{
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+@keyframes animatewave_02{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
