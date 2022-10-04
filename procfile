@@ -1,1 +1,1 @@
-web guinicorn mysite.wsgi:application --log-file -
+web guinicorn ecommerce.wsgi
