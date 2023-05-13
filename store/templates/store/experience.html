@@ -1,15 +1,40 @@
 {% extends 'store/base.html' %}
 {% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'store/project.css' %}">
+{% endblock %}
 {% block title %}
 experience
 {% endblock %}
 
 {% block body %}
     <section class="hidden">
-        <h1 id="name">Skills and <br> Exprerience</h1>
+        <h1 id="name">Projects</h1>
     </section>
-    <section class="hidden">
-        <p>My level of expertice varries among differnt fields, I have worked on a number of projects ranging from basic web sites to complex applications that challenges core knowledge and reuires deep understanding and research with the help of able minded individuals. I offer not only skill, but I am also a team player willing and able to work with individuals to impact on the future possitively</p>
-        <a class='button' href="{% url 'writeMeAMessage' %}">Write me a message</a>
-    </section>
+    <audio autoplay src="{% static 'store/other-media/so.mp3' %}">
+        <source src="{% static 'store/other-media/so.mp3' %}">
+    </audio>
+    <div class="grid">
+        {% for i in projects %}
+            <section class="hidden">
+                <div class="proj">
+                    <img src="{{i.image_url }}" alt="">
+                    <h3>{{i.name}}</h3>
+                    <p>{{i.description}}</p>
+                    {% if i.link %}
+                        <a href="http://www.{{i.link}}">view project</a>
+                    {% endif %}
+                    {% if i.video_link %}
+                        <a href="http://www.{{i.video_link}}">video demo</a>
+                    {% endif %}
+                    {% if i.github %}
+                        <a href="http://www.{{i.github}}">source code</a>
+                    {% endif %}
+                </div>
+            </section>
+        {% endfor %}
+        <section class="hidden">
+            <a class='button' href="{% url 'writeMeAMessage' %}">Write me a message</a>
+        </section>
+    </div>
 {% endblock %}

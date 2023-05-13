@@ -10,15 +10,57 @@ index
         <h1 id="name">Hi,<br>I am Stephen,<br>A Full-stack Developer</h1>
     </section>
 
-    <img src="#" alt="" class="bigS">
+    <section class="hidden" style="padding: 0px;display: block;"><img src="static/store/images/letter.png" alt="" class="bigS"></section>
 
     <section class="hidden">
         <h1>I love <span class="auto-type" style="color: rgb(67, 238, 67);"></span></h1>
     </section>
 
     <section class="hidden">
-        <h3>Python programmer / Django Developer</h3>
-        <a class='button' href="{% url 'aboutMe' %}">About Me</a>
+        <h3>Python programmer / Full-stack Developer</h3>
+    </section>
+
+    <img src="static/store/images/comp.png" alt="" class="comp">
+    <section class="hidden">
+        <h1 id="name">About Me</h1>
+    </section>
+
+    <section class="hidden">
+        <p>Highly dedicated and motivated full-stack developer with a strong academic background and a passion for developing innovative software solution. I have been involved in the development and deployment of several insightful websites and applications. My skill set revolves arround but not limited to HTML, CSS, Javascript, Python, Django, Postgresql etc. 
+        I am a tech enthusiast and have always had a keen intrest inmatters that affect not only the present but also the future, and I am willing and able to use my skill set to impact on the future positively.<span style="color: green; font-size: small; font-weight: bold;"> Currently open to oppourtunities</span></p>
+        <p class="softskills">Programming Languages</p>
+        <ul class="softskills_li">
+            <li>Python</li>
+            <li>Javascript</li>
+            <li>Postgresql</li>
+            <li>React</li>
+            <li>React Native</li>
+        </ul>
+        <div class="right">
+            <p>Other Technologies</p>
+            <ul class="softskills_lii">
+                <li>Django, React, React Native, Dask</li>
+                <li>Postgresql, mysql, Apache spark</li>
+                <li>Version control : Git</li>
+                <li>VS code, Pycharm, Node.js, RESTful API's and moree!</li>
+            </ul>
+        </div>
+            <br><br>
+        <a class='button' style="font-size: larger;" href="{% url 'experience' %}">Projects</a><br><br>
+    </section>
+    
+    <section class="hidden">
+        <h1 id="name">Skills and <br> Exprerience</h1>
+    </section>
+    <section class="hidden">
+        <p>My level of expertice varries among differnt fields, I have worked on a number of projects ranging from basic web sites to complex applications that challenges core knowledge and reuires deep understanding and research with the help of able minded individuals. I offer not only skill, but I am also a team player willing and able to work with individuals to impact on the future possitively</p>
+        <p class="softskills">Additional Skills</p>
+        <ul class="softskills_liii">
+            <li>Problem solving and analytical skills</li>
+            <li>Quick learner with a passion for staying updated with emerging technologies and industry trends</li>
+            <li>Excellent teamwork and communication skills developed through group projects and presentations.</li>
+        </ul>
+        <a class='button' href="{% url 'writeMeAMessage' %}">Write me a message</a>
     </section>
 
 {% endblock %}

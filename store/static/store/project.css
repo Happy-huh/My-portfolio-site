@@ -1,0 +1,79 @@
+body{
+    background: url('./other-media/bc.gif');
+    overflow-x: hidden;
+}
+footer{
+    height: 30%;
+}
+.proj{
+    background-color: aqua;
+    width: 400px;
+    padding: 2em;
+    border-radius: 1em;
+    margin: 1em;
+    color: black;
+}
+.proj img{
+    width: 50%;
+}
+.proj p{
+    position: absolute;
+    left: 51%;
+    width: 15%;
+    top: 20px;
+    height: 140px;
+    overflow: hidden;
+}
+.proj a{
+    color: blue;
+    text-decoration: none;
+    font-size: small;
+    margin-left: 1em;
+}
+.button{
+    border-radius: 100px;
+    color: rgb(41, 245, 14);
+    font-weight: bolder;
+    border: 3px solid rgb(41, 245, 14);
+}
+/* p:hover{
+    color: blue;
+} */
+@media screen and (max-width: 900px) {
+    .proj p{
+        position: absolute;
+        left: 51%;
+        width: 25%;
+        top: 25px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .proj p{
+        position: absolute;
+        left: 55%;
+        width: 40%;
+        top: -5px;
+        height: 139px;
+        overflow: hidden;
+        color: black;
+    }
+    .proj{
+        position: relative;
+        width: 90%;
+        padding-bottom: 5px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .proj p{
+        position: absolute;
+        left: 55%;
+        width: 40%;
+        top: -5px;
+        height: 125px;
+        overflow: hidden;
+        color: black;
+    }
+    h3{
+        padding-top: 1em;
+    }
+}

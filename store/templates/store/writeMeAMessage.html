@@ -6,16 +6,18 @@ write Me A Message
 
 {% block body %}
 <section class="hidden">
-    <h1 id="name">Contact Me</h1>
+    <h1 id="name">Contact Me <br>
+        <span style="font-size: medium;">onyedikas019@gmail.com</span>
+    </h1>
 </section>
     <section class="hidden">
-        <p>I am intrested in building my career and knowledge as a programmer, if you have any request please don't hesitate to contact me using the below form below</p>
+        <p>If you like my works and want to contact me please don't hesitate to <a style="color: #23d5ab;" href="mailto:onyedika@gmail.com" target="_blank" title="Link to email Stephen">Email me</a> or use the form below. I'm open to work and collaborations.</p>
     </section>
     <section class="hidden">
         <form action="{% url 'writeMeAMessage' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{form}}
-            <input type="submit" value="submit">
+            <input style="width: 80%; background-color: #23d5ab; margin-left: 2em; padding: 0.3em; font-size: large;" class='sub' type="submit" value="submit">
         </form>
         <p class="hidden_message hide" style="font-size: 18px;color: black;background-color: pink;text-align: center;">submitted</p>
     </section>
@@ -24,7 +26,10 @@ write Me A Message
         var form = document.querySelector('form')
         form.addEventListener('submit', function(){
             var message = document.querySelector('.hidden_message')
+            var sub = document.querySelector('.sub')
+            sub.classList.add('hide')
             message.classList.remove('hide')
+            alert('Thank you your message has been sent')
         })
     </script>
 

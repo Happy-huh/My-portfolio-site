@@ -14,16 +14,24 @@ body{
     padding: 0;
     box-sizing: border-box;
     margin: 0;
+    overflow-x: hidden;
 }
 #name{
-    font-size: 28px;
+    font-size: 35px;
     color: rgb(18, 235, 18);
     border: 5px solid green;
     border-radius: 50%;
-    padding: 35px;
+    padding: 45px;
     position: relative;
     right: 250px;
 }
+/* #name:hover{
+    background-color: rgb(18, 235, 18);
+    color: white;
+    word-spacing: 1em;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+} */
 @keyframes gradient{
     0%{
         background-position: 0% 50%;
@@ -34,6 +42,25 @@ body{
     100%{
         background-position: 0% 50%;
     }
+}
+.bigS{
+    position: absolute;
+    left: 75%;
+    bottom: 60%;
+    width: 200px;
+}
+.bigS:hover{
+    aspect-ratio: 8/11;
+    object-fit: contain;
+    mix-blend-mode: color-dodge;
+    width: 210px;
+}
+.comp{
+    display: none;
+    position: absolute;
+    left: 75%;
+    bottom: 10%;
+    width: 200px;
 }
 section p{
     font-size: 12px;
@@ -73,13 +100,44 @@ form textarea:focus{
     padding: 10px 3em 10px;
     text-decoration: none;
 }
+.button:hover{
+    background-color: #23d5ab;
+    color: black;
+}
+.softskills{
+    color: rgb(18, 235, 18);
+    border-bottom: 5px solid green;
+    font-size: larger;
+}
+.softskills_li{
+    position: relative;
+    left: -20%;
+    text-align: start;
+}
+.softskills_lii{
+    position: relative;
+    left: 20%;
+    text-align: start;
+    place-items: flex-end;
+    align-content: flex-end;
+}
+.right{
+    position:relative; left: 40%;
+}
+.right p{
+    color: rgb(18, 235, 18);font-size: larger;
+}
+.right ul{
+    position:relative; left: -10%;
+}
 footer ul{
     position: relative;
     left: 248px;
 }
-li{
+footer li{
     display: inline;
     padding: 6px;
+    margin-left: 2em;
 }
 footer li a{
     text-decoration: none;
@@ -123,7 +181,7 @@ section{
     border-radius: 12px;
     padding: 1rem;
     margin: 0 0.5rem;
-}
+} 
 footer{
     position: relative;
     width: 100%;
@@ -134,6 +192,7 @@ footer{
 footer{
     position: relative;
     top: 30%;
+    height: 150px;
 }
 footer .wave{
     position: absolute;
@@ -168,6 +227,21 @@ footer .wave#wave4{
     bottom: 20;
     animation: animateWave_02 3s linear infinite;
 }
+/* p:hover{
+    color: #23d5ab;
+    word-spacing: 1em;
+}
+li:hover{
+    color: #23d5ab;
+    word-spacing: 1em;
+} */
+footer p{
+    color: rgb(202, 202, 202);
+    font-size: small;
+    position: relative;
+    left: 30%;
+    padding-top: 1em;
+}
 @keyframes animateWave{
     0%{
         background-position-x: 1000px;
@@ -182,5 +256,122 @@ footer .wave#wave4{
     }
     100%{
         background-position-x: 1000px;
+    }
+}
+@media screen and (max-width: 800px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    #name{
+        position: relative;
+        left: 0px;
+    }
+    .bigS{
+        display: none;
+    }
+    .comp{
+        display: none;
+    }
+    section p{
+        width: 80%;
+    }
+    .right{
+        position:relative; left: 20%;
+    }
+    footer{
+        width: 150%;
+        height: 50%;
+    }
+    footer .wave{
+        display: none;
+    }
+    .logos{
+        display: none;
+    }
+    section{
+        padding: 1em;
+    }
+    footer li{
+        margin-left: 2em;
+        position: relative;
+        right: 300px;
+    }
+    footer p{
+        color: rgb(202, 202, 202);
+        font-size: small;
+        position: relative;
+        left: 15%;
+    }
+}
+@media screen and (max-width: 535px) {
+    html, body{
+        overflow-x: hidden;
+        color: #04fff2;
+    }
+    h3{
+        color: white;
+    }
+    .bigS{
+        position: absolute;
+        left: 350px;
+        bottom: 50%;
+        width: 200px;
+        padding: 0px;
+        margin: 0px;
+        display: block;
+        opacity: 1000;
+        display: none;
+    }
+    .comp{
+        display: none;
+        position: absolute;
+        left: 350px;
+        top: 110%;
+        width: 200px;
+        padding: 0px;
+        margin: 0px;
+        opacity: 1000;
+    }
+    section p{
+        max-width: 200px;
+        color: white;
+    }
+    .right{
+        position:relative; left: 20%;
+    }
+    body{
+        background: url('./other-media/bcc.gif');
+        overflow-x: hidden;
+    }
+    #name{
+        position: relative;
+        left: 0px;
+        font-size: 26px;
+    }
+    footer .wave{
+        display: none;
+    }
+    .logos{
+        display: none;
+    }
+    section{
+        padding: 2em;
+    }
+    footer li a{
+        text-decoration: none;
+        color: black;
+    }
+    textarea{
+        width: 100%;
+    }
+    footer li{
+        display: block;
+        position: relative;
+        right: 300px;
+    }
+    footer p{
+        color: rgb(202, 202, 202);
+        font-size: small;
+        position: static
     }
 }

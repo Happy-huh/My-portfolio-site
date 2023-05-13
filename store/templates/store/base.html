@@ -3,11 +3,13 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{% static 'store/styles.css' %}">
+    {% block css %}
+    {% endblock %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {% block title %}
-        my port
+        my portolio site
         {% endblock %}</title>
 </head>
 <body>
@@ -23,21 +25,22 @@
         
     <nav>
         <ul>
-            <li><a href="{% url 'store' %}">home</a></li>
-            <li><a href="{% url 'aboutMe' %}">about me</a></li>
-            <li><a href="{% url 'experience' %}">experience</a></li>
+            <li><a href="{% url 'index' %}">home</a></li>
+            <li><a href="{% url 'experience' %}">Projects</a></li>
             <li><a href="{% url 'writeMeAMessage' %}">write me a message</a></li>
+            <li><a href="mailto:onyedika@gmail.com" target="_blank" title="Link to email Stephen">Email me</a></li>
         </ul>
     </nav>
+    <p>&copy; Steve's portfolio. All right reserved</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="{% static 'store/js.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var typed = new Typed('.auto-type',{
             strings: ["coding!", "and coding!!", "and coding again!!!"],
-            typespeed: 150,
-            backspeed: 150,
+            typespeed: 200,
+            backspeed: 200,
             loop: true
         })
     </script>
